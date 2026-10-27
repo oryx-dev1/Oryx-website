@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Oryx Studios</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Drybrush';
+            src: url('Oryx-website/Drybrush.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+        :root{
+            --bg:#000; --card: #000000; --text:#fff; --pink: #ffffff; --orange:#ff9a1f;
+            --red:#6b1212;
+        }
+        *{box-sizing:border-box;margin:0;padding:0}
+        body{background:var(--bg);color:var(--text);font-family:'Atkinson Hyperlegible',sans-serif;font-size:1.15rem;line-height:1.45}
+        h1,h2,h3,.logo{font-family:'Drybrush',cursive;font-weight:300;text-transform:uppercase;letter-spacing:.03em}
+
+        /* HERO */
+        .hero{position:relative;overflow:hidden;min-height:400px;padding:50px 5vw 40px;
+            background:linear-gradient(90deg,#000 0%,#1a0707 45%,var(--red) 100%);
+            display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+        .hero::after{content:"";position:absolute;inset:auto 0 0 0;height:120px;background:linear-gradient(transparent,#000)}
+        .hero .shape{position:absolute;right:-20%;top:-360px;object-fit:contain;aspect-ratio:1;opacity:5%;}
+        .avatar{width:300px;height:340px;max-width: 100%;flex:none;border-radius:18px;display:grid;place-items:center;
+            color:#ffffff66;text-align:left;font-size:.95rem;padding:-10px;z-index:1}
+        .avatar img{width:100%;height:100%;object-fit:cover}
+        .hero-text{z-index:1;max-width:700px}
+        .hero-text h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1;margin-bottom:28px}
+        .socials{display:flex;gap:16px;align-items:center}
+        .socials a{width:52px;height:52px;display:grid;place-items:center;border-radius:12px;background:#0008;transition:.2s}
+        .socials a:hover{transform:translateY(-4px) scale(1.08);background:#fff2}
+        .socials svg{width:30px;height:30px;fill:#fff}
+
+        section{padding:30px 5vw}
+        h2{font-size:clamp(2.6rem,5vw,3.8rem);text-align:center;color:var(--pink);margin-bottom:28px}
+
+        /* ABOUT */
+        .about{display:grid;grid-template-columns:1fr auto 1fr;gap:40px;align-items:center;max-width:1200px;margin:0 auto}
+        .about p+p{margin-top:1.4em}
+        .mascot{text-align:center}
+        .mascot .pic{width:110px;height:110px;margin:0 auto;border-radius:50%;display:grid;place-items:center;font-size:.75rem;color:#ffffff66;overflow:hidden}
+        .mascot .pic img{width:100%;height:100%;object-fit:cover}
+        .mascot .logo{font-size:4rem;color:var(--pink);line-height:1;margin-top:10px}
+
+        /* GAMES */
+        .games{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:40px;max-width:1300px;margin:0 auto;padding-bottom:30px}
+        .game{background:var(--card);border-radius:18px;padding:40px 30px 22px;text-align:center;text-decoration:none;color:inherit;
+            transition:transform .2s, box-shadow .2s;display:block}
+        .game:hover{transform:translateY(-6px);box-shadow:0 10px 30px rgb(0 0 0 / 0.6)
+        }
+        .thumb{aspect-ratio:4/3;border-radius:14px;overflow:hidden;background:#1d1a17;display:grid;place-items:center}
+        .thumb img{width:100%;height:100%;object-fit:cover}
+        .thumb svg{width:55%;opacity:.5}
+        .game h3{font-size:2.3rem;color:var(--pink);margin-top:16px}
+
+        footer{text-align:center;padding:30px;color:#ffffff88;font-size:.95rem}
+
+        @media(max-width:850px){
+            .about{grid-template-columns:1fr;text-align:center}
+            .mascot{order:-1}
+            .hero{justify-content:center;text-align:center}
+            .socials{justify-content:center}
+        }
+    </style>
+</head>
+<body>
+
+<header class="hero">
+    <div class="shape"><img src="ORYX11%20BW%20INV.png" alt="Oryx"></div>
+    <div class="avatar"><img src="exp.png" alt="Oryx"></div>
+    <div class="hero-text">
+        <h1>Hey! I'm Oryx, a self-taught game developer from Oman</h1>
+        <nav class="socials">
+            <a href="#" aria-label="Discord" title="Discord"><svg viewBox="0 0 24 24"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.2.5a18 18 0 0 0-6.4 0L8.6 3a19.7 19.7 0 0 0-4.9 1.4C.6 9 0 13.5.3 18a19.9 19.9 0 0 0 6 3l.8-1.3-1.2-.6.3-.2a14 14 0 0 0 11.6 0l.3.2-1.200.6.8 1.300a19.800 19.800 0 0 0 6-3c.4-5.200-.7-9.700-3.400-13.600ZM8.500 15.300c-1.100 0-2-1-2-2.200s.9-2.200 2-2.200 2 1 2 2.200-.9 2.200-2 2.200Zm7 0c-1.100 0-2-1-2-2.200s.9-2.200 2-2.200 2 1 2 2.200-.9 2.200-2 2.200Z"/></svg></a>
+            <a href="#" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24"><path d="M23 7.200a3 3 0 0 0-2.100-2.100C19 4.600 12 4.600 12 4.600s-7 0-8.900.5A3 3 0 0 0 1 7.200C.5 9 .5 12 .5 12s0 3 .5 4.800a3 3 0 0 0 2.100 2.100c1.900.5 8.900.5 8.900.5s7 0 8.900-.5a3 3 0 0 0 2.100-2.100c.5-1.800.5-4.800.5-4.800s0-3-.5-4.800ZM9.800 15.200V8.800l5.700 3.200-5.700 3.200Z"/></svg></a>
+            <a href="#" aria-label="itch.io" title="itch.io"><svg viewBox="0 0 24 24"><path d="M3.500 2 1 6v1.300c0 1.100 1 2.100 2.200 2.100 1.200 0 2.200-.9 2.200-2.100 0 1.100 1 2.100 2.300 2.100 1.200 0 2.200-.9 2.200-2.100 0 1.100 1 2.100 2.300 2.100s2.200-.9 2.200-2.100c0 1.100 1 2.100 2.200 2.100 1.200 0 2.300-.9 2.300-2.100V6l-2.500-4H3.500ZM4.600 11v8.500c0 1.400.2 2.400 2.200 2.500h10.400c2-.1 2.200-1.100 2.200-2.500V11a3.700 3.700 0 0 1-2.500-1 3.700 3.700 0 0 1-2.900 1 3.700 3.700 0 0 1-2.800-1 3.700 3.700 0 0 1-2.800 1 3.700 3.700 0 0 1-2.800-1 3.800 3.800 0 0 1-2.600 1Zm5 2h4.800v1.800h-1.500v3.200h-1.800v-3.200H9.600V13Z"/></svg></a>
+            <a href="#" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.500a4.500 4.500 0 1 1 0 9 4.500 4.500 0 0 1 0-9Zm0 2a2.500 2.500 0 1 0 0 5 2.500 2.500 0 0 0 0-5Zm5.200-3.200a1.100 1.100 0 1 1 0 2.200 1.100 1.100 0 0 1 0-2.200Z"/></svg></a>
+        </nav>
+    </div>
+</header>
+
+<section id="about">
+    <h2>A little about me</h2>
+    <div class="about">
+        <div>
+            <p>Hello! I'm a 17 year old from Oman. When I was a kid I taught myself how to make games, do photography, and make short YouTube videos.</p>
+            <p>I like a lot of things, such as gaming, adventures, and being productive.</p>
+        </div>
+        <div class="mascot">
+            <div class="pic"><img src="pfp.png" alt="Oryx"></div>
+            <div class="logo">Oryx</div>
+        </div>
+        <div>
+            <p>I'm currently studying at Sultan Qaboos University (SQU) in the economics field. It's my freshman year, so I'm pretty new.</p>
+            <p>I plan to make money from selling games or game assets, or by doing photography as a freelancer.</p>
+        </div>
+    </div>
+</section>
+
+<section id="games">
+    <h2>My recent games</h2>
+    <div class="games">
+        <a class="game" href="#">
+            <div class="thumb">
+                <img src="ZiuBG2.png"></div>
+            <h3>Zapin Bulbz</h3>
+        </a>
+        <a class="game" href="#">
+            <div class="thumb">
+                <img src="Rkve9H.png"></div>
+            <h3>LIMINALITIES</h3>
+        </a>
+        <a class="game" href="#">
+            <div class="thumb">
+                <img src="NYyPiR.png"></div>
+            <h3>DATASHIP</h3>
+        </a>
+    </div>
+</section>
+
+<footer>&copy; 2026 oryx_dev</footer>
+</body>
+</html>
