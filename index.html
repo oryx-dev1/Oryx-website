@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Plaster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Vujahday+Script&display=swap" rel="stylesheet">
 
     <style>
         .handlee-regular {
@@ -15,6 +17,13 @@
             font-weight: 400;
             font-style: normal;
         }
+        .vujahday-script-regular {
+            font-family: "Vujahday Script", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+
 
         :root{
             --bg:#000; --card: #000000; --text:#fff; --pink: #ffffff; --orange:#ff9a1f;
@@ -25,7 +34,7 @@
         h1,h2,h3,.logo{font-family:"Handlee", cursive;font-weight:300;letter-spacing:.03em}
 
         /* HERO */
-        .hero{position:relative;overflow:hidden;min-height:400px;padding:50px 5vw 40px;
+        .hero{position:relative;overflow:hidden;min-height:400px;padding:50px 15vw 40px;
             background:linear-gradient(90deg,#000 0%,#1a0707 45%,var(--red) 100%);
             display:flex;align-items:center;gap:10px;flex-wrap:wrap}
         .hero::after{content:"";position:absolute;inset:auto 0 0 0;height:120px;background:linear-gradient(transparent,#000)}
@@ -46,10 +55,11 @@
         /* ABOUT */
         .about{display:grid;grid-template-columns:1fr auto 1fr;gap:40px;align-items:center;max-width:1200px;margin:0 auto}
         .about p+p{margin-top:1.4em}
-        .mascot{text-align:center}
+        .mascot{text-align:center;font-family:'JetBrains Mono Medium', sans-serif}
         .mascot .pic{width:110px;height:110px;margin:0 auto;border-radius:50%;display:grid;place-items:center;font-size:.75rem;color:#ffffff66;overflow:hidden}
         .mascot .pic img{width:100%;height:100%;object-fit:cover}
-        .mascot .logo{font-size:4rem;color:var(--pink);line-height:1;margin-top:10px}
+        .mascot .logo{font-size:3rem;color:var(--pink);line-height:1;margin-top:10px;font-family: "Vujahday Script", sans-serif;text-align:center;transform: translate(-10px, 0px);}
+
 
         /* GAMES */
         .games{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:40px;max-width:1300px;margin:0 auto;padding-bottom:30px}
@@ -80,10 +90,10 @@
     <div class="hero-text">
         <h1>Hey! I'm Oryx, a self-taught game developer from Oman</h1>
         <nav class="socials">
-            <a href="#" aria-label="Discord" title="Discord"><svg viewBox="0 0 24 24"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.2.5a18 18 0 0 0-6.4 0L8.6 3a19.7 19.7 0 0 0-4.9 1.4C.6 9 0 13.5.3 18a19.9 19.9 0 0 0 6 3l.8-1.3-1.2-.6.3-.2a14 14 0 0 0 11.6 0l.3.2-1.200.6.8 1.300a19.800 19.800 0 0 0 6-3c.4-5.200-.7-9.700-3.400-13.600ZM8.500 15.300c-1.100 0-2-1-2-2.200s.9-2.200 2-2.200 2 1 2 2.200-.9 2.200-2 2.200Zm7 0c-1.100 0-2-1-2-2.200s.9-2.200 2-2.200 2 1 2 2.200-.9 2.200-2 2.200Z"/></svg></a>
-            <a href="#" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24"><path d="M23 7.200a3 3 0 0 0-2.100-2.100C19 4.600 12 4.600 12 4.600s-7 0-8.900.5A3 3 0 0 0 1 7.200C.5 9 .5 12 .5 12s0 3 .5 4.800a3 3 0 0 0 2.100 2.100c1.900.5 8.900.5 8.900.5s7 0 8.900-.5a3 3 0 0 0 2.100-2.100c.5-1.800.5-4.800.5-4.800s0-3-.5-4.800ZM9.800 15.200V8.800l5.700 3.200-5.700 3.200Z"/></svg></a>
-            <a href="#" aria-label="itch.io" title="itch.io"><svg viewBox="0 0 24 24"><path d="M3.500 2 1 6v1.300c0 1.100 1 2.100 2.200 2.100 1.200 0 2.200-.9 2.200-2.100 0 1.100 1 2.100 2.300 2.100 1.200 0 2.200-.9 2.200-2.100 0 1.100 1 2.100 2.300 2.100s2.200-.9 2.200-2.100c0 1.100 1 2.100 2.200 2.100 1.200 0 2.300-.9 2.300-2.100V6l-2.500-4H3.500ZM4.600 11v8.500c0 1.400.2 2.400 2.200 2.500h10.400c2-.1 2.200-1.100 2.200-2.500V11a3.700 3.700 0 0 1-2.500-1 3.700 3.700 0 0 1-2.900 1 3.700 3.700 0 0 1-2.800-1 3.700 3.700 0 0 1-2.800 1 3.700 3.700 0 0 1-2.800-1 3.800 3.800 0 0 1-2.600 1Zm5 2h4.800v1.800h-1.500v3.200h-1.800v-3.200H9.600V13Z"/></svg></a>
-            <a href="#" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.500a4.500 4.500 0 1 1 0 9 4.500 4.500 0 0 1 0-9Zm0 2a2.500 2.500 0 1 0 0 5 2.500 2.500 0 0 0 0-5Zm5.200-3.200a1.100 1.100 0 1 1 0 2.200 1.100 1.100 0 0 1 0-2.200Z"/></svg></a>
+            <a href="https://discord.gg/ZprngSgpBy" target="_blank" aria-label="Discord" title="Discord"><svg viewBox="0 0 24 24"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.2.5a18 18 0 0 0-6.4 0L8.6 3a19.7 19.7 0 0 0-4.9 1.4C.6 9 0 13.5.3 18a19.9 19.9 0 0 0 6 3l.8-1.3-1.2-.6.3-.2a14 14 0 0 0 11.6 0l.3.2-1.200.6.8 1.300a19.800 19.800 0 0 0 6-3c.4-5.200-.7-9.700-3.400-13.600ZM8.500 15.300c-1.100 0-2-1-2-2.200s.9-2.200 2-2.200 2 1 2 2.200-.9 2.200-2 2.200Zm7 0c-1.100 0-2-1-2-2.200s.9-2.200 2-2.200 2 1 2 2.200-.9 2.200-2 2.200Z"/></svg></a>
+            <a href="https://www.youtube.com/@0RYX-2/" target="_blank" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24"><path d="M23 7.200a3 3 0 0 0-2.100-2.100C19 4.600 12 4.600 12 4.600s-7 0-8.900.5A3 3 0 0 0 1 7.200C.5 9 .5 12 .5 12s0 3 .5 4.800a3 3 0 0 0 2.100 2.100c1.900.5 8.900.5 8.900.5s7 0 8.900-.5a3 3 0 0 0 2.100-2.100c.5-1.800.5-4.800.5-4.800s0-3-.5-4.800ZM9.800 15.200V8.800l5.700 3.200-5.700 3.200Z"/></svg></a>
+            <a href="https://oryx-studios.itch.io/" target="_blank" aria-label="itch.io" title="itch.io"><svg viewBox="0 0 24 24"><path d="M3.500 2 1 6v1.300c0 1.100 1 2.100 2.200 2.100 1.200 0 2.200-.9 2.200-2.100 0 1.100 1 2.100 2.300 2.100 1.200 0 2.200-.9 2.200-2.100 0 1.100 1 2.100 2.300 2.100s2.200-.9 2.200-2.100c0 1.100 1 2.100 2.200 2.100 1.200 0 2.300-.9 2.300-2.100V6l-2.500-4H3.500ZM4.600 11v8.500c0 1.400.2 2.400 2.200 2.500h10.400c2-.1 2.200-1.100 2.200-2.500V11a3.700 3.700 0 0 1-2.500-1 3.700 3.700 0 0 1-2.900 1 3.700 3.700 0 0 1-2.800-1 3.700 3.700 0 0 1-2.800 1 3.700 3.700 0 0 1-2.800-1 3.800 3.800 0 0 1-2.600 1Zm5 2h4.800v1.800h-1.500v3.200h-1.800v-3.200H9.600V13Z"/></svg></a>
+            <a href="https://www.instagram.com/oryx_dev/" target="_blank" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.500a4.500 4.500 0 1 1 0 9 4.500 4.500 0 0 1 0-9Zm0 2a2.500 2.500 0 1 0 0 5 2.500 2.500 0 0 0 0-5Zm5.200-3.200a1.100 1.100 0 1 1 0 2.200 1.100 1.100 0 0 1 0-2.200Z"/></svg></a>
         </nav>
     </div>
 </header>
@@ -97,7 +107,7 @@
         </div>
         <div class="mascot">
             <div class="pic"><img src="pfp.png" alt="Oryx"></div>
-            <div class="logo">Oryx</div>
+            <div class="logo">ORYX</div>
         </div>
         <div>
             <p>I'm currently studying at Sultan Qaboos University (SQU) in the economics field. It's my freshman year, so I'm pretty new.</p>
@@ -109,17 +119,17 @@
 <section id="games">
     <h2>My recent games</h2>
     <div class="games">
-        <a class="game" href="#">
+        <a class="game" href="https://oryx-studios.itch.io/zapin-bulbz" target="_blank">
             <div class="thumb">
                 <img src="ZiuBG2.png"></div>
             <h3>Zapin Bulbz</h3>
         </a>
-        <a class="game" href="#">
+        <a class="game" href="https://oryx-studios.itch.io/liminalities" target="_blank">
             <div class="thumb">
                 <img src="Rkve9H.png"></div>
             <h3>LIMINALITIES</h3>
         </a>
-        <a class="game" href="#">
+        <a class="game" href="https://oryx-studios.itch.io/data-ship" target="_blank">
             <div class="thumb">
                 <img src="NYyPiR.png"></div>
             <h3>DATASHIP</h3>
